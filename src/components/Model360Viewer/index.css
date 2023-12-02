@@ -1,0 +1,27 @@
+.model-viewer-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+#modelViewerContainer {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.model-viewer-wrapper__title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.model-viewer-wrapper__canvas div {
+  overflow-x: hidden;
+}
