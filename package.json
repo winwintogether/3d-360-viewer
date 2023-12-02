@@ -1,5 +1,6 @@
 {
   "name": "model-360-viewer",
+  "homepage": "https://winwintogether.github.io/3d-360-viewer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
