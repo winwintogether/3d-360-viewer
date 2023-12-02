@@ -1,6 +1,7 @@
-import { Canvas, ThreeElements } from '@react-three/fiber';
-import { useGLTF, Stage, OrbitControls } from '@react-three/drei';
-
+import { lazy } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Stage, OrbitControls } from '@react-three/drei';
+const ModelComponent = lazy(() => import('./Model360'));
 import './index.css';
 
 interface Custom360ViewerProps {
@@ -9,17 +10,11 @@ interface Custom360ViewerProps {
   assetUrl: string;
 }
 
-function Model(props: ThreeElements['primitive']) {
-  return <primitive {...props} />;
-}
-
 const Custom360Viewer = ({
   enableRotate = true,
   enableZoom = true,
   assetUrl,
 }: Custom360ViewerProps) => {
-  const { scene } = useGLTF(assetUrl);
-
   return (
     <div className="model-viewer-wrapper">
       <h1 className="model-viewer-wrapper__title">3D Model Viewer</h1>
@@ -39,7 +34,7 @@ const Custom360Viewer = ({
         >
           <color attach="background" args={['#f2f2f2']} />
           <Stage>
-            <Model object={scene} scale={0.01} />
+            <ModelComponent assetUrl={assetUrl} />
           </Stage>
           <OrbitControls enableRotate={enableRotate} enableZoom={enableZoom} />
         </Canvas>
