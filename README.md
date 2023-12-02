@@ -41,15 +41,15 @@ export default {
 To put the component in your document include these script & CSS tags:
 
 ```html
-<script type="module" src="/dist/model-360-viewer.js"></script>
-<link rel="stylesheet" href="/dist/model-360-viewer.css" />
+<script type="module" src="model-360-viewer.js"></script>
+<link rel="stylesheet" href="model-360-viewer.css" />
 ```
 
 Those will let you use the custom tag: `model-360-viewer`. See the example below:
 
 ```html
 <model-360-viewer
-  asset-url="/assets/models/LittlestTokyo.glb"
+  asset-url="model url"
 ></model-360-viewer>
 ```
 
